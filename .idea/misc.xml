@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/brightson.macha/Desktop/LC/Android/a00HighUX/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/brightson.macha/Desktop/LC/Android/a00HighUX/app/src/main/res/drawable/ic_home.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/brightson.macha/Desktop/LC/Android/a00HighUX/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/brightson.macha/Desktop/LC/Android/a00HighUX/app/src/main/res/layout/fragment_city_list.xml" value="0.2" />
+        <entry key="..\:/Users/brightson.macha/Desktop/LC/Android/a00HighUX/app/src/main/res/layout/fragment_favorite.xml" value="0.2" />
       </map>
     </option>
   </component>
