@@ -8,6 +8,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.bottomnavigation.BottomNavigationMenuView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 
@@ -15,8 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var toolbar: MaterialToolbar
     private lateinit var navController: NavController
-    private lateinit var drawerLayout : DrawerLayout
-    private lateinit var navigationView : NavigationView
+    private lateinit var bottomNav: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,8 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         // Initialize Views
         toolbar = findViewById(R.id.activity_main_toolbar)
-        drawerLayout =  findViewById(R.id.drawer_layout)
-        navigationView =  findViewById(R.id.nav_view)
+        bottomNav = findViewById(R.id.bottom_nav_view)
 
         // Get NavHostFragment and NavController
         val navHostFrag =
@@ -33,20 +33,12 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFrag.navController
 
         //AppBarConfiguration
-        val appBarConfig = AppBarConfiguration(navController.graph, drawerLayout)
+        val appBarConfig = AppBarConfiguration(navController.graph)
 
         //ToolBar
-        toolbar.setupWithNavController(navController,appBarConfig)
+        toolbar.setupWithNavController(navController, appBarConfig)
 
         //NavigationView
-        navigationView.setupWithNavController(navController)
-    }
-
-    override fun onBackPressed() {
-        if(drawerLayout.isOpen){
-            drawerLayout.close()
-        }else{
-            super.onBackPressed()
-        }
+        bottomNav.setupWithNavController(navController)
     }
 }
