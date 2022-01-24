@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.a00highux.R
 
 
@@ -33,8 +35,17 @@ class CityListFragment : Fragment() {
         recycleView.adapter = cityAdapter
         recycleView.setHasFixedSize(true)
 
-        val layoutManager = LinearLayoutManager(context)
+        //Linear Layout
+        //val layoutManager = LinearLayoutManager(context)
+        //layoutManager.orientation = RecyclerView.VERTICAL
+
+        //GridLayout
+        val layoutManager = GridLayoutManager(context, 2)
         layoutManager.orientation = RecyclerView.VERTICAL
+
+        //StaggeredLayout
+        //val layoutManager = StaggeredGridLayoutManager(2,RecyclerView.VERTICAL)
+
         recycleView.layoutManager = layoutManager
     }
 }

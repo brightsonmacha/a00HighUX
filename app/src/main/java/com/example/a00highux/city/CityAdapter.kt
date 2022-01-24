@@ -13,7 +13,9 @@ import com.example.a00highux.R
 class CityAdapter(val context : Context, var cityNames : ArrayList<City>) : RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CityViewHolder {
-        val itemView = LayoutInflater.from(context).inflate(R.layout.list_item_city, parent, false)
+        //InflateListItems
+        //val itemView = LayoutInflater.from(context).inflate(R.layout.list_item_city, parent, false)
+        val itemView = LayoutInflater.from(context).inflate(R.layout.grid_item_city, parent, false)
         return CityViewHolder(itemView)
     }
 
