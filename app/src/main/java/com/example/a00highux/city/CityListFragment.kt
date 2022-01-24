@@ -21,9 +21,7 @@ class CityListFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_city_list, container, false)
-
         setupRecycleView(view)
-
         return  view
     }
 
@@ -36,12 +34,12 @@ class CityListFragment : Fragment() {
         recycleView.setHasFixedSize(true)
 
         //Linear Layout
-        //val layoutManager = LinearLayoutManager(context)
-        //layoutManager.orientation = RecyclerView.VERTICAL
+        val layoutManager = LinearLayoutManager(context)
+        layoutManager.orientation = RecyclerView.VERTICAL
 
         //GridLayout
-        val layoutManager = GridLayoutManager(context, 2)
-        layoutManager.orientation = RecyclerView.VERTICAL
+        //val layoutManager = GridLayoutManager(context, 2)
+        //layoutManager.orientation = RecyclerView.VERTICAL
 
         //StaggeredLayout
         //val layoutManager = StaggeredGridLayoutManager(2,RecyclerView.VERTICAL)

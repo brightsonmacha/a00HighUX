@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name"> High UX</string>
+    <string name="favorite_fragment">Favorite Fragment</string>
 </resources>
