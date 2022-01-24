@@ -1,16 +1,13 @@
 package com.example.a00highux
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.drawerlayout.widget.DrawerLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.appbar.MaterialToolbar
-import com.google.android.material.bottomnavigation.BottomNavigationMenuView
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
 
 
 class MainActivity : AppCompatActivity() {
@@ -33,7 +30,9 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFrag.navController
 
         //AppBarConfiguration
-        val appBarConfig = AppBarConfiguration(navController.graph)
+        val topDestination = setOf(R.id.fragmentCityList, R.id.fragmentFavoriteList)
+        //val appBarConfig = AppBarConfiguration(navController.graph)
+        val appBarConfig = AppBarConfiguration(topDestination)
 
         //ToolBar
         toolbar.setupWithNavController(navController, appBarConfig)
